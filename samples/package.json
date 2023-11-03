@@ -1,0 +1,22 @@
+{
+  "name": "samples",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "simple": "node --no-warnings -r ./setup.cjs --watch"
+  },
+  "dependencies": {
+    "@zhengxs/bce-sdk-js": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "dotenv": "^16.3.1",
+    "jiti": "^1.21.0"
+  },
+  "author": "zhengxs <zhengxs2018@gmail.com>",
+  "engines": {
+    "node": ">=18.x.x"
+  },
+  "license": "MIT"
+}

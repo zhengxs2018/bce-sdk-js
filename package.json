@@ -1,0 +1,49 @@
+{
+  "name": "bce-sdk-js",
+  "private": true,
+  "version": "0.0.1-beta.0",
+  "description": "",
+  "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm -r build && pnpm fmt",
+    "watch": "pnpm -r watch",
+    "lint": "eslint . --ext ts,cjs,mjs",
+    "lint:fix": "eslint . --ext ts,cjs,mjs --fix --fix-type [problem,suggestion]",
+    "fmt": "prettier --write \"**/*.{cjs,mjs,ts,json,md}\" --log-level warn"
+  },
+  "packageManager": "pnpm@7.29.1",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.38.2",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-define-config": "^1.24.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.0.3",
+    "trash-cli": "^5.0.0",
+    "typedoc": "^0.25.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-plugin-externalize-deps": "^0.7.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": "zhengxs <zhengxs2018@gmail.com>",
+  "engines": {
+    "node": ">=18.x.x"
+  },
+  "license": "MIT"
+}

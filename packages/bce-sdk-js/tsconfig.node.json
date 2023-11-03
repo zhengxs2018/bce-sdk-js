@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../../common/profiles/tsconfig.node.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": ["vite.config.ts", "package.json"],
+  "exclude": ["node_modules"]
+}

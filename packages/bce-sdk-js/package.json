@@ -1,0 +1,45 @@
+{
+  "name": "@zhengxs/bce-sdk-js",
+  "version": "0.0.1-beta.0",
+  "description": "",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "sideEffect": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist-types/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist-types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist-types/index.d.ts",
+        "./dist-types/*"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "dist-types"
+  ],
+  "scripts": {
+    "build": "trash dist dist-types && vite build && pnpm extract-api",
+    "watch": "vite build --watch",
+    "extract-api": "mkdirp ./review && api-extractor run --local",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": "zhengxs <zhengxs2018@gmail.com>",
+  "engines": {
+    "node": ">=18.x.x"
+  },
+  "license": "MIT"
+}
